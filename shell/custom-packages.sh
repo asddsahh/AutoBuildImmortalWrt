@@ -56,3 +56,8 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
 # IPSec VPN 服务器
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ipsec-vpnd-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-zerotier-zh-cn"
+
+# --- Docker 交由 workflow UI 统一管理，避免重复注入 ---
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES -docker -docker-compose"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-dockerman -luci-i18n-dockerman-zh-cn"
+
